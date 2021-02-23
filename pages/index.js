@@ -1,18 +1,22 @@
 import Head from 'next/head'
-import Footer from '../comopnent/Footer'
-import Navbar from '../comopnent/Navbar'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div>
-      <h1>Homepage</h1>
-      <p>Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data</p>
-      <p>Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data Lorem Data</p>
-      <Link href="/alems">
-        <a>All Alems</a>
-      </Link>
-    </div>
+    <>
+      <Head>
+        <title>Developer List | Home</title>
+        <meta name="keywords" content="developers"/>
+      </Head>
+      <div>
+        <h1 className={styles.title}>Homepage</h1>
+        <p className={styles.text}>This is my <a target="_blank" href="http://shahsajib.me/">ShahSajib</a> first project on Next.js</p>
+        <p className={styles.text}> I have learnt next.js. How to create a project, managing routes, dynamic routes and deploying project in vercel.</p>
+        <Link href="/developers">
+          <a className={styles.btn}>All developers</a>
+        </Link>
+      </div>
+    </>
   )
 }
